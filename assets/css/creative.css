@@ -426,3 +426,22 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
+.footerwrap {
+  padding-top: 70px;
+  padding-bottom: 50px;
+  background-color: #2f2f2f;
+}
+
+.footerwrap p {
+  color: #537899;
+  margin-left: 10px;
+}
+
+#contact i {
+  font-size: 80px;
+  color: #4a4a4a
+}
+
+#contact i:hover {
+  color: #537899
+}
