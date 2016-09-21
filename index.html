@@ -156,9 +156,9 @@
 
 <section class="no-padding" id="portfolio">
     <div class="container-fluid">
-        <div class="row no-gutter popup-gallery">
+        <div class="row no-gutter">
             <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
+                <a href="#" class="portfolio-box modalClick" id="hangman" data-toggle="modal" data-target="#modal">
                     <img src="assets/img/portfolio1.png" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
@@ -173,7 +173,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
+                <a href="#" class="portfolio-box" data-toggle="modal" data-target="#modal">
                     <img src="assets/img/portfolio2.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
@@ -188,7 +188,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
+                <a href="#" class="portfolio-box" data-toggle="modal" data-target="#modal">
                     <img src="assets/img/portfolio3.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
@@ -203,7 +203,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
+                <a href="#" class="portfolio-box" data-toggle="modal" data-target="#modal">
                     <img src="assets/img/portfolio4.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
@@ -218,7 +218,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
+                <a href="#" class="portfolio-box" data-toggle="modal" data-target="#modal">
                     <img src="assets/img/portfolio5.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
@@ -233,7 +233,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
+                <a href="#" class="portfolio-box" data-toggle="modal" data-target="#modal">
                     <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
@@ -295,6 +295,33 @@
     </div>
 </div>
 
+<!-- MODAL HERE -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="hangmanLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body text-center" id="modalBody">
+                <h1 id="title"></h1>
+                <h4 id="role"></h4>
+                <div id="aboutProject">
+
+                </div>
+                <div
+                        class="btn btn-default btn-lg"><a href="#" target="_blank" id="link">Link
+                </a></div>
+                <div class="btn btn-default btn-lg"><a href="#" target="_blank" id="github">GitHub <i
+                        class="fa fa-github-alt"></i></a></div>
+                <div class="" id="images">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END MODAL-->
+
 <!-- jQuery -->
 <script src="assets/js/jquery.min.js"></script>
 
@@ -308,6 +335,29 @@
 
 <!-- Theme JavaScript -->
 <script src="assets/js/creative.js"></script>
+<script src="assets/js/projects.js"></script>
+<script>
+    $(".modalClick").on('click', function () {
+        var obj = $(this).attr('id');
+        console.log(obj);
+        var object = projects[obj];
+        $("#title").text(object["title"]);
+        $("#role").text(object["role"]);
+        var $div = $("<div>");
+        $.each(object["pageContent"], function(index, value) {
+           var $p = $("<p>").html(value).appendTo($div);
+        });
+        $("#aboutProject").html($div);
+        $("#link").attr("href", object["pageLink"]);
+        $("#github").attr("href", object["gitLink"]);
+        $.each(object["images"], function(i, val) {
+            var $img = $("<img>").addClass("img-responsive img-thumbnail").attr("src", val);
+            $img.appendTo("#images");
+        })
+
+
+    })
+</script>
 
 </body>
 
