@@ -94,7 +94,7 @@
                     Raymond James. Recently, I decided to give it all up and follow something I was more passionate
                     about. As soon as I discovered the world of programming, I instantly fell in love. I have so much
                     fun writing even the most simple of code and watching it work. And that is where I am today.
-                    Attending the UCF Coding Bootcamp and using every resource I can get my hands on to consume as much
+                    Attending the UCF Coding Boot Camp and using every resource I can get my hands on to consume as much
                     knowledge as possible. I am looking forward to becoming a full stack web developer and building and
                     fixing things for people every day.</p>
                 <p class="about text-faded">In addition to learning to code, my other hobbies include golf, running,
@@ -158,8 +158,38 @@
     <div class="container-fluid">
         <div class="row no-gutter">
             <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box modalClick" id="hangman" data-toggle="modal" data-target="#modal">
-                    <img src="assets/img/portfolio1.png" class="img-responsive" alt="">
+                <a href="" class="portfolio-box modalClick" id="hangman" data-toggle="modal" data-target="#modal">
+                    <img src="assets/img/portfolio/portfolio1.png" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                HANGMAN GAME
+                            </div>
+                            <div class="project-name">
+                                80s MOVIES STYLE
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="" class="portfolio-box modalClick" id="thrones" data-toggle="modal" data-target="#modal">
+                    <img src="assets/img/portfolio/portfolio2.png" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                TRIVIA GAME
+                            </div>
+                            <div class="project-name">
+                                GAME OF THRONES STYLE
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="" class="portfolio-box modalClick" id="template" data-toggle="modal" data-target="#modal">
+                    <img src="assets/img/portfolio/portfolio3.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
@@ -173,8 +203,8 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box" data-toggle="modal" data-target="#modal">
-                    <img src="assets/img/portfolio2.jpg" class="img-responsive" alt="">
+                <a href="" class="portfolio-box modalClick" id="template" data-toggle="modal" data-target="#modal">
+                    <img src="assets/img/portfolio/portfolio4.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
@@ -188,8 +218,8 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box" data-toggle="modal" data-target="#modal">
-                    <img src="assets/img/portfolio3.jpg" class="img-responsive" alt="">
+                <a href="" class="portfolio-box modalClick" id="template" data-toggle="modal" data-target="#modal">
+                    <img src="assets/img/portfolio/portfolio5.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
@@ -203,8 +233,8 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box" data-toggle="modal" data-target="#modal">
-                    <img src="assets/img/portfolio4.jpg" class="img-responsive" alt="">
+                <a href="" class="portfolio-box modalClick" id="template" data-toggle="modal" data-target="#modal">
+                    <img src="assets/img/portfolio/portfolio6.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
@@ -218,8 +248,8 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box" data-toggle="modal" data-target="#modal">
-                    <img src="assets/img/portfolio5.jpg" class="img-responsive" alt="">
+                <a href="" class="portfolio-box modalClick" id="template" data-toggle="modal" data-target="#modal">
+                    <img src="assets/img/portfolio/portfolio4.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
@@ -233,8 +263,23 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box" data-toggle="modal" data-target="#modal">
-                    <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
+                <a href="" class="portfolio-box modalClick" id="template" data-toggle="modal" data-target="#modal">
+                    <img src="assets/img/portfolio/portfolio5.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Category
+                            </div>
+                            <div class="project-name">
+                                Project Name
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="" class="portfolio-box modalClick" id="template" data-toggle="modal" data-target="#modal">
+                    <img src="assets/img/portfolio/portfolio6.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
@@ -341,22 +386,34 @@
         var obj = $(this).attr('id');
         console.log(obj);
         var object = projects[obj];
+        if (object["gitLink"] == "") {
+            $("#github").hide();
+        }
+        if (object["pageLink"] == "") {
+            $("#link").hide();
+        }
         $("#title").text(object["title"]);
         $("#role").text(object["role"]);
         var $div = $("<div>");
-        $.each(object["pageContent"], function(index, value) {
-           var $p = $("<p>").html(value).appendTo($div);
+        $.each(object["pageContent"], function (index, value) {
+            var $p = $("<p>").html(value).appendTo($div);
         });
         $("#aboutProject").html($div);
         $("#link").attr("href", object["pageLink"]);
         $("#github").attr("href", object["gitLink"]);
-        $.each(object["images"], function(i, val) {
+        $.each(object["images"], function (i, val) {
             var $img = $("<img>").addClass("img-responsive img-thumbnail").attr("src", val);
             $img.appendTo("#images");
         })
 
 
-    })
+    });
+
+    $("#modal").on("hidden.bs.modal", function (e) {
+        $("#link").show();
+        $("#github").show();
+        $("#images").empty();
+    });
 </script>
 
 </body>

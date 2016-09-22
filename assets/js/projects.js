@@ -1,20 +1,45 @@
 var projects = {
     "hangman": {
-        "headerTop": "BOOTCAMP PROJECT",
         "title": "80s HANGMAN",
         "role": "ROLE: LEAD DESIGNER",
         "pageContent": [
-              "This was one of my first projects at UCF Coding Bootcamp. The assignment was to build a hangman game using javascript that allows a player to guess letters by pressing the keys on the keyboard . When I initally built the project, it was mostly Vanilla JS. The original project did have the music play when you won and the picture change."
-            ,
-           "Since completing it for the boot camp, I have gone back and added letter buttons so that a player can play on a mobile device. I have also reformatted the code to mostly jQuery and cleaned it up for readability."
-            ,
-
+            "This is a hangman game I built using 80's movies as the theme. The logic is all done in javascript and I used jQuery for HTML manipulation. I also used Bootstrap CSS for the look. The game can be played with either the keyboard or by pushing buttons, allowing for a great user experience on a computer or mobile device",
+            "In addition to showing you the correct answer after you win or lose, a picture to go with that movie is displayed and a classic song from the movie begins to play. To stop the music and change the picture back, simply start playing again.",
                "Feel free to play the game and let me know what you think of it!"
-
         ],
         "pageLink": "https://eightieshangman.herokuapp.com/",
         "gitLink": "https://github.com/rgtalbot/week-3-game",
-        "images": ["assets/img/portfolio/hangman1.png"]
+        "images": ["assets/img/portfolio/hangman/hangman1.png"]
+    },
+    "thrones": {
+        "title": "Game of Thrones Trivia",
+        "role": "ROLE: LEAD DESIGNER",
+        "pageContent": [
+            "This is a quick trivia game I built based on Game of Thrones. It jsues javascript for logic as well as jQuery and Bootstrap CSS. The game logs correct and incorrect answers, displays the correct answer with a gif, and then after a timeout, moves on to the next question."
+            ,
+            "Once the game is over, the number of correct and incorrect answers are displayed along with the play again button. Playing again randomly draws 10 questions from the question bank so that you never get the same 10 questions in a row"
+            ,
+
+            "Feel free to play the game and let me know what you think of it!"
+
+        ],
+        "pageLink": "https://thronestrivia.herokuapp.com/",
+        "gitLink": "https://github.com/rgtalbot/TriviaGame",
+        "images": ["assets/img/portfolio/trivia/thrones1.png",
+            "assets/img/portfolio/trivia/thrones2.png",
+            "assets/img/portfolio/trivia/thrones3.png"]
+    },
+    "template": {
+        "title": "PLACEHOLDER",
+        "role": "ROLE: LEAD DESIGNER",
+        "pageContent": [
+            "Lorem Impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centures, but also the leap into electronic typesetting, remaining essentially unchanged."
+            ,
+            "Bacon ipsum dolor amet tri-tip short loin prosciutto, short ribs jerky rump landjaeger hamburger beef filet mignon. Tri-tip short ribs ground round landjaeger hamburger andouille turducken rump alcatra. Jerky porchetta flank, ham hock sausage landjaeger brisket. Strip steak shoulder prosciutto pork loin cupim, pork belly meatball. Cupim spare ribs andouille fatback. Andouille frankfurter jerky, cow biltong ribeye ground round short ribs. Hamburger pork belly sausage, landjaeger kevin leberkas tenderloin pig drumstick andouille alcatra pork chop jerky rump fatback."
+        ],
+        "pageLink": "",
+        "gitLink": "",
+        "images": ["assets/img/portfolio/template/pr01.jpg", "assets/img/portfolio/template/pr02.jpg"]
     }
 
 }
